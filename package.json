@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "OwOmay <owomay@owomay.dev> (https://owomay.dev)",
   "devDependencies": {
-    "vite": "~7.3.1",
+    "vite": "~7.3.3",
     "sass-embedded": "~1.97.3"
   },
   "scripts": {

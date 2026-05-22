@@ -1,13 +1,16 @@
+import { createWindow } from "./window.ts";
+
 window.addEventListener("load", () => {
   // @ts-ignore
   document.getElementById("start-button").addEventListener("click", () => {
+    let menu = document.getElementById("start-menu");
     // @ts-ignore
-    if (document.getElementById("start-menu").style.display == "none") {
+    if (menu.style.display == "none") {
       // @ts-ignore
-      document.getElementById("start-menu").style.display = "block";
+      menu.style.display = "block";
     } else {
       // @ts-ignore
-      document.getElementById("start-menu").style.display = "none";
+      menu.style.display = "none";
     }
   });
 
@@ -15,6 +18,20 @@ window.addEventListener("load", () => {
     if (el.id == "shutdown") {
       el.addEventListener("click", () => {
         window.close();
+      });
+    } else if (el.classList.contains("start-category")) {
+      el.addEventListener("click", () => {
+        let category = document.getElementById(
+          el.getAttribute("data-for") + "-menu",
+        );
+        // @ts-ignore
+        if (category.style.display == "none") {
+          // @ts-ignore
+          category.style.display = "block";
+        } else {
+          // @ts-ignore
+          category.style.display = "none";
+        }
       });
     } else {
       el.addEventListener("click", () => {

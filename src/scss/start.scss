@@ -2,6 +2,12 @@
 
 #start-button {
     width: 128px;
+    padding: 4px;
+}
+
+#start-button:active {
+    @extend %inward;
+    padding: 4px;
 }
 
 #start-menu {
@@ -14,8 +20,8 @@
 .start-category-menu {
     @extend %outward;
     position: absolute;
-    left: 0;
-    bottom: 30px;
+    left: 142px;
+    bottom: 26px;
 }
 
 .start-tab {
@@ -28,6 +34,11 @@
     display: flex;
     align-items: center;
     gap: 2px;
+}
+
+.start-tab:active {
+    @extend %inward;
+    padding: 4px;
 }
 
 .start-tab > * {

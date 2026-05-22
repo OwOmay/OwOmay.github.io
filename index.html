@@ -9,7 +9,7 @@
         <link rel="canonical" href="https://owomay.dev" />
         <meta
             name="description"
-            content="OwOmay.dev is the holder of the shenanigans of a nerd. OwO, May, Omay, whatever you want to call him. Maybe a furry, maybe gay. Who knows?"
+            content="OwOmay.dev is the holder of the shenanigans of a nerd. OwO, May, Omay, whatever you want to call them. maybe a furry, maybe gay. who knows?"
         />
 
         <title>OwOmay.dev</title>
@@ -20,59 +20,84 @@
             import "/src/scss/start.scss";
             import "/src/scss/footer.scss";
             import "/src/scss/widgets.scss";
-        </script>
 
-        <script src="/src/ts/screen.ts" type="module"></script>
-        <script src="/src/ts/window.ts" type="module"></script>
-        <script src="/src/ts/start.ts" type="module"></script>
+            import "/src/ts/screen.ts";
+            import "/src/ts/start.ts";
+        </script>
     </head>
+
     <body>
+        <div id="loader"></div>
         <footer class="out">
             <div class="window-tab" id="start-button">
                 <img src="/img/icon.png" />
-                <p>Home</p>
-                <div id="start-menu" style="display: none">
-                    <div
-                        class="start-tab"
-                        data-src="<iframe src='/apps/about.html'></iframe>"
-                    >
-                        <img src="/img/icon.png" />
-                        <p>About</p>
-                    </div>
-                    <div class="start-tab start-category">
-                        <img src="/img/icon.png" />
-                        <p>Contact</p>
-                        <div class="start-category-menu">
-                            <div class="start-tab">
-                                <img src="/img/icon.png" />
-                                <a>Discord</a>
-                            </div>
-                            <div class="start-tab">
-                                <img src="/img/icon.png" />
-                                <a>Tumblr</a>
-                            </div>
-                            <div class="start-tab">
-                                <img src="/img/icon.png" />
-                                <a>Bluesky</a>
-                            </div>
-                            <div class="start-tab">
-                                <img src="/img/icon.png" />
-                                <a>Mastodon</a>
-                            </div>
-                            <div class="start-tab">
-                                <img src="/img/icon.png" />
-                                <a>GitHub</a>
-                            </div>
-                            <div class="start-tab">
-                                <img src="/img/icon.png" />
-                                <a>Itch.io</a>
-                            </div>
+                <p>home</p>
+            </div>
+            <div id="start-menu" style="display: none">
+                <div
+                    class="start-tab"
+                    data-src="<iframe src='/apps/about.html'></iframe>"
+                >
+                    <img src="/img/icon.png" />
+                    <p>about</p>
+                </div>
+                <div class="start-tab start-category" data-for="about">
+                    <img src="/img/icon.png" />
+                    <p>contact</p>
+                </div>
+                <div
+                    id="about-menu"
+                    class="start-category-menu"
+                    style="display: none"
+                >
+                    <a href="https://discord.gg/xtupcxt84n" target="_blank">
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />
+                            Discord
                         </div>
-                    </div>
-                    <div class="start-tab" id="shutdown">
-                        <img src="/img/icon.png" />
-                        <p>Shutdown</p>
-                    </div>
+                    </a>
+                    <a href="https://owomay.tumblr.com/" target="_blank">
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />
+                            Tumblr
+                        </div>
+                    </a>
+                    <a
+                        href="https://bsky.app/profile/owomay.dev"
+                        target="_blank"
+                    >
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />
+                            Bluesky
+                        </div>
+                    </a>
+                    <a href="https://woof.tech/@owomay" target="_blank">
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />
+                            Mastodon
+                        </div>
+                    </a>
+                    <a href="https://github.com/OwOmay" target="_blank">
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />
+                            GitHub
+                        </div>
+                    </a>
+                    <a href="https://owomay.itch.io" target="_blank">
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />
+                            itch.io
+                        </div>
+                    </a>
+                    <a href="mailto:me@owomay.dev" target="_blank">
+                        <div class="start-tab">
+                            <img src="/img/icon.png" />email
+                        </div>
+                    </a>
+                </div>
+                <div class="start-tab" id="shutdown">
+                    <img src="/img/icon.png" />
+                    <p>shutdown</p>
                 </div>
             </div>
         </footer>

@@ -1,4 +1,4 @@
-function createWindow(
+export function createWindow(
   icon: string,
   title: string,
   id: string,
