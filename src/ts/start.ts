@@ -17,6 +17,7 @@ window.addEventListener("load", () => {
   for (let el of document.getElementsByClassName("start-tab")) {
     if (el.id == "shutdown") {
       el.addEventListener("click", () => {
+        // lmao why doesn't this work on localhost?
         window.close();
       });
     } else if (el.classList.contains("start-category")) {
@@ -35,17 +36,27 @@ window.addEventListener("load", () => {
       });
     } else {
       el.addEventListener("click", () => {
-        createWindow(
-          "/img/icon.png",
+        if (!el.classList.contains("no-window")) {
+          createWindow(
+            "/img/icon.png",
+            // @ts-ignore
+            el.lastElementChild.textContent,
+            // @ts-ignore
+            el.lastElementChild.textContent.toLowerCase(),
+            parseInt(el.getAttribute("data-width") || "200"),
+            parseInt(el.getAttribute("data-height") || "100"),
+            el.getAttribute("data-src") || "",
+            true,
+          );
+        }
+
+        for (let el of document.getElementsByClassName("start-category-menu")) {
           // @ts-ignore
-          el.lastElementChild.textContent,
-          // @ts-ignore
-          el.lastElementChild.textContent.toLowerCase(),
-          parseInt(el.getAttribute("data-width") || "200"),
-          parseInt(el.getAttribute("data-height") || "100"),
-          el.getAttribute("data-src") || "",
-          true,
-        );
+          el.style.display = "none";
+        }
+
+        // @ts-ignore
+        document.getElementById("start-menu").style.display = "none";
       });
     }
   }
