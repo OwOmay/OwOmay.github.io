@@ -17,6 +17,7 @@
     bottom: 30px;
 }
 
+// with this, it only supports one level, but if i need, i'll fix it
 .start-category-menu {
     @extend %outward;
     position: absolute;
@@ -27,7 +28,7 @@
 .start-tab {
     @extend %outward;
     width: 128px;
-    height: 18px;
+    height: 24px;
     margin: 0;
     cursor: pointer;
     padding: 4px;
