@@ -28,6 +28,11 @@
     image-rendering: pixelated;
 }
 
+a {
+    text-decoration: none;
+    color: palette.$palette-black;
+}
+
 b,
 strong {
     font-family: "MS Sans Bold", monospace;

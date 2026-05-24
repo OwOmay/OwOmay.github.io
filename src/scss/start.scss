@@ -17,7 +17,8 @@
     bottom: 30px;
 }
 
-// with this, it only supports one level, but if i need, i'll fix it
+// yeah i should do something smarter but i'm just gonna leave left and bottom
+// as something for the html me to deal with.
 .start-category-menu {
     @extend %outward;
     position: absolute;
@@ -44,4 +45,8 @@
 
 .start-tab > * {
     display: inline-flex;
+}
+
+.start-category-menu > * > .start-tab {
+    height: 18px;
 }
