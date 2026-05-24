@@ -64,8 +64,8 @@ export function createWindow(
       windowEl.setAttribute("data-height", windowEl.style.height);
       windowEl.style.left = "0";
       windowEl.style.top = "0";
-      windowEl.style.width = "634px";
-      windowEl.style.height = "474px";
+      windowEl.style.width = "640px";
+      windowEl.style.height = "450px";
     }
   };
 
